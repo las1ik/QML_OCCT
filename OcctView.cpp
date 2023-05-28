@@ -493,15 +493,12 @@ void OcctView::intersectionLine(double dX1_1,double dY1_1,double dZ1_1,
 }
 
 void OcctView::erase(){
+    shapes.clear();
     m_context->RemoveAll(Standard_True);
     m_context->UpdateCurrentViewer();
     emit occViewChanged();
 }
 
-//Функция save() работает не коректнно т.к.
-//записывает данные о всех созданных шейпах
-//в течении работы, как инициализированных,
-//так и уже удаленных
 void OcctView::save(){
     TopoDS_Compound compound;
     BRep_Builder builder;
