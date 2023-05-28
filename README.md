@@ -8,9 +8,9 @@ qmake
 
 compile opencascade7.6
 
-	Link on occt executable files: https://drive.google.com/file/d/1DONwr5bpLlDS7oma03epuSpmZT-_GLu7/view?usp=sharing
+Link on occt executable files: https://drive.google.com/file/d/1DONwr5bpLlDS7oma03epuSpmZT-_GLu7/view?usp=sharing
 
-	X:\...\ - your way to "build7.6.0MinGW81+qt5.x" folder
+X:\...\ - your way to "build7.6.0MinGW81+qt5.x" folder
 
 	1.Open "Projects" tab, in field "Build Environment"add to PATH:
 				X:\...\build7.6.0MinGW81+qt5.x\3rd party\MinGW
