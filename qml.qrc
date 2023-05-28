@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>WorkData.qml</file>
+        <file>DialogCircle.qml</file>
+        <file>DialogBlock.qml</file>
+        <file>Mbar.qml</file>
+        <file>DialogLine.qml</file>
+        <file>DialogModel.qml</file>
+    </qresource>
+</RCC>
