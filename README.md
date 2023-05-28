@@ -13,10 +13,10 @@ Link on occt executable files: https://drive.google.com/file/d/1DONwr5bpLlDS7oma
 X: \...\ - your way to "build7.6.0MinGW81+qt5.x" folder
 
 	1.Open "Projects" tab, in field "Build Environment"add to PATH:
-				X:\...\build7.6.0MinGW81+qt5.x\3rd party\MinGW
-				X:\...\build7.6.0MinGW81+qt5.x\inc
-				X:\...\build7.6.0MinGW81+qt5.x\MinGW81\bin
-				X:\...\build7.6.0MinGW81+qt5.x\MinGW81\libd
+				X:...\build7.6.0MinGW81+qt5.x\3rd party\MinGW
+				X:...\build7.6.0MinGW81+qt5.x\inc
+				X:...\build7.6.0MinGW81+qt5.x\MinGW81\bin
+				X:...\build7.6.0MinGW81+qt5.x\MinGW81\libd
 
 	2.Edit QML_OCCT.pro file:
 				INCLUDEPATH +=X:/.../build7.6.0MinGW81+qt5.x/inc
