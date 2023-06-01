@@ -5,11 +5,11 @@ import QtQuick.Dialogs 1.2
 import OpenCascade 7.6
 
 Dialog {
-
+    id: dialog
     title: "Положение модели и масштаб"
     width: 250
     height: 300
-    standardButtons:  StandardButton.Ok|StandardButton.Cancel
+    standardButtons:  StandardButton.Ok|StandardButton.Cancel|StandardButton.RestoreDefaults
 
     property real m_X
     property real m_Y
@@ -70,9 +70,17 @@ Dialog {
             }
             console.log("X:", m_X, "Y:", m_Y, "Z:", m_Z)
 
-        } else {
+        } else if(clickedButton === StandardButton.Cancel){
             m_X = 0; m_Y = 0; m_Z = 0
             console.log("X:", m_X, "Y:", m_Y, "Z:", m_Z)
+        }else if (clickedButton === StandardButton.RestoreDefaults) {
+            m_X = 1
+            m_Y = 1
+            m_Z = 1
+            m_scale = 1
+            console.log("Установленны значения по умолчанию(1)")
+            dialog.accepted()
+            dialog.close()
         }
     }
 
