@@ -5,11 +5,11 @@ import QtQuick.Dialogs 1.2
 import OpenCascade 7.6
 
 Dialog {
-
+    id: dialog
     title: "Размеры сферы и ее положение"
     width: 250
     height: 300
-    standardButtons:  StandardButton.Ok|StandardButton.Cancel
+    standardButtons:  StandardButton.Ok|StandardButton.Cancel|StandardButton.RestoreDefaults
 
     property real m_X
     property real m_Y
@@ -63,9 +63,17 @@ Dialog {
             m_R = nameFieldRadius.text
             console.log( "m_R:", m_R)
 
-        } else {
+        } else if (clickedButton === StandardButton.Cancel) {
             m_R = 0;
             console.log("m_R:", m_R)
+        } else if (clickedButton === StandardButton.RestoreDefaults) {
+            m_X = 1
+            m_Y = 1
+            m_Z = 1
+            m_R = 1
+            console.log("Установленны значения по умолчанию(1)")
+            dialog.accepted()
+            dialog.close()
         }
     }
 
